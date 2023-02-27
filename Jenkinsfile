@@ -17,7 +17,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -a"
-                sh "docker container  run -p 9090:80 nginx -D"
+                sh "docker run --name mynginx2 -p 8081:80 -d nginx"
             }
         }
 
